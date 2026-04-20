@@ -9,16 +9,17 @@ while True:
     print("2 - Subtract")
     print("3 - Multiply")
     print("4 - Divide")
-    print("5 - Show History")
-    print("6 - Exit")
+    print("5 - Power (a^b)")
+    print("6 - Show History")
+    print("7 - Exit")
 
     choice = input("Enter choice: ")
 
-    if choice == "6":
+    if choice == 7":
         print("Exiting...bye")
         break
 
-    if choice == "5":
+    if choice == "6":
         if len(history) == 0:
             print("No history yet")
         else:
@@ -27,7 +28,7 @@ while True:
                 print(item)
         continue
 
-    if choice not in ["1", "2", "3", "4"]:
+   if choice not in ["1", "2", "3", "4", "5", "6"]:
         print("Invalid choice, try again")
         continue
 
@@ -56,5 +57,9 @@ while True:
             continue
         result = round(a / b, 2)
         history.append(f"{a} / {b} = {result}")
+        
+    elif choice == "5":
+        result = a ** b
+        history.append(f"{a} ^ {b} = {result}")
 
     print("Answer is:", result)
