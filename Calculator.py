@@ -58,8 +58,4 @@ while True:
         result = round(a / b, 2)
         history.append(f"{a} / {b} = {result}")
         
-    elif choice == "5":
-        result = a ** b
-        history.append(f"{a} ^ {b} = {result}")
-
-    print("Answer is:", result)
+ 
